@@ -33,8 +33,6 @@ public class CoronaVirusDataService {
         RestTemplate restTemplate = new RestTemplate();
         String result = restTemplate.getForObject(VIRUS_DATA_URL, String.class);
 
-        System.out.println(result);
-
         StringReader csvBodyReader = new StringReader(result);
         Iterable<CSVRecord> records = CSVFormat.DEFAULT.withFirstRecordAsHeader().parse(csvBodyReader);
         for (CSVRecord record : records) {
@@ -47,6 +45,7 @@ public class CoronaVirusDataService {
             locationStat.setDiffFromPrevDay(latestCases - prevDayCases);
             newStats.add(locationStat);
         }
+        System.out.println("no. od elements are" + newStats.size());
         this.allStats = newStats;
     }
 
