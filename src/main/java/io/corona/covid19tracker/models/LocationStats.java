@@ -21,7 +21,6 @@ public class LocationStats {
     @Column(name = "diffFromPrevDay")
     private int diffFromPrevDay;
 
-
     public LocationStats() {
     }
 

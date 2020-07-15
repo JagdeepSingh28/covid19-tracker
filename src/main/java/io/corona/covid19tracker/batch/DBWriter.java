@@ -20,8 +20,8 @@ public class DBWriter implements ItemWriter<LocationStats> {
 
     @Override
     public void write(List<? extends LocationStats> locationStats) throws Exception {
-        System.out.println("Data Saved for Users: " + locationStats);
-        locationStatsRepository.saveAll(locationStats);
+//        System.out.println("Data Saved for Users: " + locationStats);
+//        locationStatsRepository.saveAll(locationStats);
     }
 
 //    @Bean

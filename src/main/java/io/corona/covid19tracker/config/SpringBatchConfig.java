@@ -26,11 +26,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.FileSystemResource;
 
 @Configuration
-@EnableBatchProcessing
 public class SpringBatchConfig {
-
-    @Autowired
-    CoronaVirusDataService coronaVirusDataService;
 
     @Bean
     public Job job(JobBuilderFactory jobBuilderFactory,
